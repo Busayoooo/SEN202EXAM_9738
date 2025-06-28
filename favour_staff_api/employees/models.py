@@ -22,6 +22,7 @@ class StaffBase(models.Model):
 class Manager(StaffBase):
     department = models.CharField(max_length=100)
     has_company_card = models.BooleanField(default=True)
+    team_size = models.PositiveIntegerField(default=0)
 
     def get_role(self):
         return "Manager"
