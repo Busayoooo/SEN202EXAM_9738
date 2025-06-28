@@ -14,7 +14,7 @@ class StaffBase(models.Model):
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='active')
 
     def get_role(self):
-        pass
+        return "Staff"
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
